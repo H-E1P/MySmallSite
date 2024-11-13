@@ -123,7 +123,7 @@ def formatting_a_Single_Page_Site_form(js_file_url_without_scheme : str) -> str:
     
         it just make a html page by formats my-small-site's-format by js-file-url.
     '''
-    return f'<meta charset="utf-8"><script src="http://{js_file_url_without_scheme}'
+    return f'<meta charset="utf-8"><script src="http://{js_file_url_without_scheme}"></script>'
 
 def cli_core(cli_argv : list, user_inputer = input, user_input_prompt = 'the mys file to compare to website : ', help_menual_logger = print):
     '''
