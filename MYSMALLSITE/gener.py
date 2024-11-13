@@ -79,7 +79,7 @@ def wither(opener = o):
             see more about this function by do `help(wither)`!
             '''
             with opener(file_name) as fp: #make file context manager my fp to wrapping the function to decorater work function's work with 'with'
-                return func(file_name, *argv, **kargv)
+                return func(fp, *argv, **kargv)
         
         return with_opener
     return with_deco
@@ -134,7 +134,7 @@ def cli_core(cli_argv : list, user_inputer = input, user_input_prompt = 'the mys
     try:
         argv_length = len(cli_argv)
         assert argv_length < 3, TypeError("python -m mysmallsite/gener.py required argument is only one!! the \"*.mys file.\"!!!")
-        if argv_length: #length isn't 0 (=1)
+        if argv_length - 1: #length isn't 0 (=1)
             fn = cli_argv[1] #filename
         else:
             fn = user_inputer(user_input_prompt)
