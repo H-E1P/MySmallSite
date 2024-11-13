@@ -133,9 +133,9 @@ def cli_core(cli_argv : list, user_inputer = input, user_input_prompt = 'the mys
     '''
     try:
         argv_length = len(cli_argv)
-        assert argv_length < 2, TypeError("python -m mysmallsite/gener.py required argument is only one!! the \"*.mys file.\"!!!")
+        assert argv_length < 3, TypeError("python -m mysmallsite/gener.py required argument is only one!! the \"*.mys file.\"!!!")
         if argv_length: #length isn't 0 (=1)
-            fn = cli_argv[0] #filename
+            fn = cli_argv[1] #filename
         else:
             fn = user_inputer(user_input_prompt)
         if fn in "-h -help --help --h /h /help /H".split():
