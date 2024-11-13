@@ -1,6 +1,8 @@
 #MySmallSite - gener.py
 
 from os.path import isfile as _if
+from os.path import isfile as _id
+from os import mkdir as _md
 from os.path import splitext as _spt
 from sys import argv as _a
 
@@ -158,7 +160,8 @@ def cli_core(cli_argv : list, user_inputer = input, user_input_prompt = 'the mys
         assert fn_ext == ".mys", TypeError(f"file {fn} isn't *.mys type.");  
     except AssertionError as err:
         raise err
-    return write(formatting_a_Single_Page_Site_form(read(fn)))
+    if not _id(fn_cor): _md(fn_cor)
+    return write(f'{fn_cor}/index.htm', formatting_a_Single_Page_Site_form(read(fn)))
 
 cli_app = lambda : cli_core(_a) #see menual.
 
