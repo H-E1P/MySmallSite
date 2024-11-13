@@ -133,7 +133,7 @@ def cli_core(cli_argv : list, user_inputer = input, user_input_prompt = 'the mys
     '''
     try:
         argv_length = len(cli_argv)
-        assert argv_length > 1, TypeError("python -m mysmallsite/gener.py required argument is only one!! the \"*.mys file.\"!!!")
+        assert argv_length < 2, TypeError("python -m mysmallsite/gener.py required argument is only one!! the \"*.mys file.\"!!!")
         if argv_length: #length isn't 0 (=1)
             fn = cli_argv[0] #filename
         else:
