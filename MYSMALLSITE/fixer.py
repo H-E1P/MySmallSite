@@ -11,6 +11,6 @@ def fixer(filename):
 
 def cli():
     l = len(_a)
-    assert l < 3, ArgumentError("fixer's parameter must be one file path or non(to input)")
+    assert l < 3, TypeError("fixer's parameter must be one file path or non(to input)")
     a = _a[1] if l - 1 else input("file : ")
     fixer(a)
