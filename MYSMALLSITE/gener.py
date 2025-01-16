@@ -17,17 +17,21 @@ from sys import argv as _a
     ## function() & @decorator
         \* plz use 'help([target])' to read the menual of it. \*
          - `help(wither)`
-    
+
     ## CLI MENUAL
         ### CLI - MAIN WORK : webpage generating
-            `$ python -m mysmallsite/gener.py [*.mys file name] to use.`
+            `$ python -m mysmallsite.gener [*.mys file name] to use.`
+            `$ python -m mysmallsite.`
         ### CLI - SUB WORK : cli user-style app
-            `$ python -m mysmallsite/gener.py work as self-user-input to use it-self`
+            `$ python -m mysmallsite.gener work as self-user-input to use it-self`
         ### CLI - PRINTING MENUALS
-            `$ python -m mysmallsite/gener.py -(-)h(elp)`
-            `$ python -m mysmallsite/gener.py /h(elp)`
-            `$ python -m mysmallsite/gener.py /H`
-'''
+            `$ python -m mysmallsite.gener -(-)h(elp)`
+            `$ python -m mysmallsite.gener /h(elp)`
+            `$ python -m mysmallsite.gener /H`
+
+    ## MYS
+    it just JS url file.
+''' #I think that... you were so busy that write `.` as `/`
 
 o = open
 w = lambda f : o(f, 'w')
@@ -129,9 +133,8 @@ def cli_core(cli_argv : list, user_inputer = input, user_input_prompt = 'the mys
     '''
     # function `cli_core(cli_argv : list, user_inputer = input, help_menual_logger = print)`
 
-     > `python -m mysmallsite/gener.py example_file.mys` to make file `mysmallsite.htm`
-     > `python -m mysmallsite/gener.py` do it self user-input as function user-inputer
-     > `python -m mysmallsite/gener.py -h`, `python -m mysmallsite/gener.py -help`, `python -m mysmallsite/gener.py --h`, `python -m mysmallsite/gener.py --help`, `python -m mysmallsite/gener.py /h', `python -m mysmallsite/gener.py /help`, `python -m mysmallsite/gener.py /H` prints help menual
+     > `python -m mysmallsite.gener example_file.mys` to make file `exanple_file/index.htm`
+     > `python -m mysmallsite.gener -h`, `python -m mysmallsite.gener -help`, `python -m mysmallsite.gener --h`, `python -m mysmallsite.gener --help`, `python -m mysmallsite.gener /h', `python -m mysmallsite.gener /help`, `python -m mysmallsite.gener /H` prints help menual
     '''
     try:
         argv_length = len(cli_argv)
@@ -152,6 +155,9 @@ def cli_core(cli_argv : list, user_inputer = input, user_input_prompt = 'the mys
     `$ python -m mysmallsite/gener.py -(-)h(elp)`
     `$ python -m mysmallsite/gener.py /h(elp)`
     `$ python -m mysmallsite/gener.py /H`
+
+# MYS FILE
+it just JS url
 ''')
         else:
             assert _if(fn), FileNotFoundError(f"no filename {fn}")

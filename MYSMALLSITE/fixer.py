@@ -1,5 +1,5 @@
 from sys import argv as _a
-from MYSMALLSITE.gener import _read, _write, _if
+from .gener import _read, _write, _if #wow now it's better 2 watch it ;)
 
 def fixer(filename):
     '''
