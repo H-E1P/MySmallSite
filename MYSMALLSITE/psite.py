@@ -49,7 +49,8 @@ def reget(fn : str):
     PSI to JS
     '''
     file = getJ(fn)
-    MSPV, JSF, SAVE_TO = (lambda x : map(BRegularly, (x['MSPV'], x['*.js'], x['sav2'])))(file)
+    MSPV = (lambda x : '/'.join(x) if RUList(x) else x)(x['MSPV']) ##LLAST FIX ;)
+    MJSF, SAVE_TO = (lambda x : map(BRegularly, (x['*.js'], x['sav2'])))(file)
     write(SAVE_TO, f'''\
 import {{{', '.join(file['LOAD'])}}} from "https://raw.githubusercontent.com/H-E1P/MyParamSite/{MSPV}/pageApp.js";
 
