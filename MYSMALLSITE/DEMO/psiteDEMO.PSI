@@ -1,0 +1,6 @@
+{
+	"MPSV" : ["refs", "heads", "main"],
+	"LOAD" : ["pageAppSet as run", "MainInterface"],
+	"*.js" : ["src", "codingappleisgoat.js"],
+	"PATH" : ["project", "codingappleisgoat.js"]
+}
